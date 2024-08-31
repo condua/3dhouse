@@ -1,0 +1,55 @@
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: clip-path 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho clip-path */
+}
+
+.image-left {
+  left: 0;
+}
+
+.image-right {
+  clip-path: inset(0 0 0 var(--position, 50%));
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--position, 50%);
+  /* width: 100px; */
+  cursor: ew-resize;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-button {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: green 0px 0px 5px 1px;
+  border-radius: 100%;
+  border: none;
+  cursor: ew-resize;
+  outline: none;
+}
+@media only screen and (min-width: 600px) {
+  .image-slider {
+    width: 50%;
+    height: 400px;
+  }
+}
