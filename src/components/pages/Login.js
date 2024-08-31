@@ -2,6 +2,7 @@ import React from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,10 +12,12 @@ const Login = () => {
     try {
       const credential = response.credential;
       // Gửi token tới server để xác thực
-      const result = await axios.post("http://localhost:5000/verify-token", {
-        idToken: credential,
-      });
-      const user = result.data;
+      //   const result = await axios.post("http://192.168.2.57:5000/verify-token", {
+      //     idToken: credential,
+      //   });
+      const result = jwtDecode(credential);
+      console.log(result);
+      const user = result;
       // Lưu thông tin người dùng vào localStorage
       localStorage.setItem("googleUser", JSON.stringify(user));
       navigate("/profile");
