@@ -73,6 +73,11 @@ const Header = () => {
               Liên hệ
             </a>
           </li>
+          <li>
+            <a className="hover:text-gray-400 duration-700" href="/star">
+              Ngôi sao
+            </a>
+          </li>
           <li className="px-1 py-2 bg-green-700 rounded-md hover:bg-green-500 duration-700">
             <a style={{ color: "white" }} href="/login">
               Login

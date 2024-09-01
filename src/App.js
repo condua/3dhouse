@@ -9,6 +9,7 @@ import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Login from "./components/pages/Login";
 import Profile from "./components/pages/Profile";
+import AnimatedRectangleWithStar from "./components/pages/Star";
 function App() {
   return (
     <GoogleOAuthProvider clientId="658394130281-1m00f13gnk7go8e2hg3ccikkul94sl2g.apps.googleusercontent.com">
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/star" element={<AnimatedRectangleWithStar />} />
         </Routes>
         <Footer />
       </BrowserRouter>
