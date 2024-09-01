@@ -16,10 +16,35 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to a server)
-    console.log(formData);
+
+    try {
+      const response = await fetch(
+        "https://crud-mongodb-gzyk.onrender.com/email/email-marketing",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: formData.email }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      console.log("Success:", data);
+      alert("Hãy kiểm tra email của bạn để vào nhóm chat nhé");
+      // Optionally clear the form or show a success message
+      setFormData({ email: "" });
+    } catch (error) {
+      alert("Lỗi: ", error);
+      console.error("Error:", error);
+      // Optionally show an error message
+    }
   };
 
   return (

@@ -15,6 +15,7 @@ const Login = () => {
       //   const result = await axios.post("http://192.168.2.57:5000/verify-token", {
       //     idToken: credential,
       //   });
+
       const result = jwtDecode(credential);
       console.log(result);
       const user = result;
@@ -31,8 +32,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full md:w-1/3 flex flex-col items-center">
+    <div className="flex items-center justify-center h-96 bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-11/12 md:w-1/3 flex flex-col items-center">
         <h2 className="text-2xl font-bold text-center mb-6">
           Sign in with Google
         </h2>
