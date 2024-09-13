@@ -43,7 +43,9 @@ const Saoke = () => {
     (transaction) =>
       transaction.notes.toLowerCase().includes(searchTerm) ||
       transaction.name.toLowerCase().includes(searchTerm) ||
-      transaction.amount.toString().includes(searchTerm)
+      transaction.amount.toString().includes(searchTerm) ||
+      transaction.stt.toString().includes(searchTerm) ||
+      transaction.date.toString().includes(searchTerm)
   );
   // Tính toán số trang
   const totalPages = Math.ceil(filteredTransactions.length / itemsPerPage);
@@ -91,7 +93,7 @@ const Saoke = () => {
       {/* Ô tìm kiếm */}
       <input
         type="text"
-        placeholder="Search notes..."
+        placeholder="Search by Id, Date, Name, Amount, Notes"
         value={searchTerm}
         onChange={handleSearch}
         className="border border-gray-300 p-2 mb-4 w-full rounded"
