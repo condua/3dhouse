@@ -74,7 +74,10 @@ const Tracuu = () => {
   };
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Transaction Table</h2>
+      <h2 className="md:text-2xl text-sm font-bold mb-4">
+        Bảng sao kê giao dịch chuyển khoản đến tài khoản VCB của MTTQ từ
+        1/9/2024 - 10/9/2024
+      </h2>
 
       {/* Ô tìm kiếm */}
       <input
