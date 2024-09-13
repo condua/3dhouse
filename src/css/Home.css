@@ -31,7 +31,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 70%;
+  /* width: 70%; */
 }
 
 .navbar ul li a {
