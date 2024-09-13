@@ -73,10 +73,21 @@ const Header = () => {
               Liên hệ
             </a>
           </li>
-          <li>
-            <a className="hover:text-gray-400 duration-700" href="/tracuu">
-              Tra cứu
+          <li className="relative">
+            <a
+              href="/tracuu"
+              className="inline-block hover:text-gray-400 duration-700"
+            >
+              Tra cứu ▼
             </a>
+            <ul className="dropdown-content">
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                <a href="/tracuu">VCB</a>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                <a href="/saoke">VietinBank</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a className="hover:text-gray-400 duration-700" href="/star">
