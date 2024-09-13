@@ -74,6 +74,11 @@ const Header = () => {
             </a>
           </li>
           <li>
+            <a className="hover:text-gray-400 duration-700" href="/tracuu">
+              Tra cứu
+            </a>
+          </li>
+          <li>
             <a className="hover:text-gray-400 duration-700" href="/star">
               Ngôi sao
             </a>
