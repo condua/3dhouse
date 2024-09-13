@@ -52,8 +52,8 @@ const Tracuu = () => {
 
   // Tạo số trang hiển thị linh hoạt
   const getPaginationGroup = () => {
-    const maxPagesToShow = 4; // Số trang muốn hiển thị tối đa
-    let start = Math.max(1, currentPage); // Hiển thị các trang lân cận trang hiện tại
+    const maxPagesToShow = 5; // Số trang muốn hiển thị tối đa
+    let start = Math.max(1, currentPage - 2); // Hiển thị các trang lân cận trang hiện tại
     let end = Math.min(start + maxPagesToShow - 1, totalPages);
 
     if (end - start < maxPagesToShow - 1) {
