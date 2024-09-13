@@ -157,7 +157,7 @@ const Tracuu = () => {
       {/* Điều khiển pagination */}
       <div className="mt-4 flex justify-center space-x-2">
         {/* Nút chuyển về trang 1 */}
-        {currentPage >= 1 && (
+        {currentPage > 1 && (
           <button
             onClick={() => changePage(1)}
             className="md:text-base text-xxs md:px-4 px-2 md:py-2 py-1 rounded bg-gray-300 hover:bg-gray-400"
