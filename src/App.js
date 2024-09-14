@@ -13,6 +13,7 @@ import AnimatedRectangleWithStar from "./components/pages/Star";
 import YoutubeVideo from "./components/pages/YoutubeVideo";
 import Tracuu from "./components/pages/Tracuu";
 import Saoke from "./components/pages/Saoke";
+import SaokeBidv from "./components/pages/SaokeBidv";
 function App() {
   return (
     <GoogleOAuthProvider clientId="658394130281-1m00f13gnk7go8e2hg3ccikkul94sl2g.apps.googleusercontent.com">
@@ -28,6 +29,7 @@ function App() {
           <Route path="/video" element={<YoutubeVideo />} />
           <Route path="/tracuu" element={<Tracuu />} />
           <Route path="/saoke" element={<Saoke />} />
+          <Route path="/saokebidv" element={<SaokeBidv />} />
         </Routes>
         <Footer />
       </BrowserRouter>
